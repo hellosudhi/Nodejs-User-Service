@@ -1,0 +1,16 @@
+{
+  "name": "usercreation",
+  "version": "1.0.0",
+  "description": "This is a mongo db test ",
+  "main": "Server.js",
+  "scripts": {
+    "start": "node src/Server.js"
+  },
+  "author": "Sudhi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.3"
+  }
+}
