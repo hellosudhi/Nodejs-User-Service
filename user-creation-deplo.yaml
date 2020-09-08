@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: userCreation
+  name: user-creation-service
 spec:
   selector:
-    app: userCreation
+    app: user-creation-service
   ports:
-    - name: userCreation
+    - name: user-creation-service
       port: 9000
       targetPort: 9000
       protocol: TCP
