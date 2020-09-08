@@ -1,25 +1,19 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const user = require('./Model/User.js')
-const cors = require('cors')
 const app = express()
 
 app.use(express.json())
-app.use(cors)
+
 const port = process.env.PORT || 9000
-const connection_Url = `mongodb+srv://onelove:UcM4ba1oknY6jlXj@onelove.ckjpe.gcp.mongodb.net/userDb?retryWrites=true&w=majority`
-mongoose.connect(connection_Url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-})
-var db = mongoose.connection
+
+require('./Config/DBConnection')()
 app.get('/vapaus', (request, response) => {
   response.send('this is working')
 })
-app.get('/user', (request, response) => {
-  user
-    .find((error, data) => {
+app.get('/user', async (request, response) => {
+  await user
+    .find({}, (error, data) => {
       if (error) {
         response.status(500).send(error)
       } else {
@@ -42,4 +36,4 @@ app.post('/user/new', (request, response) => {
     .catch((er) => console.log(er))
 })
 
-app.listen(port, () => console.log(`Running server on ${port}`))
+app.listen(port, (error) => console.log(`Running server on ${port}==>${error}`))
