@@ -1,9 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const user = require('./Model/User.js')
+const cors = require('cors')
 const app = express()
 
 app.use(express.json())
+app.use(cors)
 const port = process.env.PORT || 9000
 const connection_Url = `mongodb+srv://onelove:UcM4ba1oknY6jlXj@onelove.ckjpe.gcp.mongodb.net/userDb?retryWrites=true&w=majority`
 mongoose.connect(connection_Url, {
