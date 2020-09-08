@@ -14,20 +14,8 @@ mongoose.connect(connection_Url, {
   useCreateIndex: true,
 })
 var db = mongoose.connection
-app.get('/', (request, response) => {
-  user
-    .find((error, data) => {
-      if (error) {
-        response.status(500).send(error)
-      } else {
-        response.status(201).send(
-          data.map((data) => {
-            data._id
-          }),
-        )
-      }
-    })
-    .catch((er) => console.log(er))
+app.get('/vapaus', (request, response) => {
+  response.send('this is working')
 })
 app.get('/user', (request, response) => {
   user

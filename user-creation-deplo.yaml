@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: user-creation-service
+  type: ClusterIP
   ports:
     - name: user-creation-service
       port: 9000
