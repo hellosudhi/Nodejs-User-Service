@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
-const connection_Url = `mongodb+srv://onelove:UcM4ba1oknY6jlXj@onelove.ckjpe.gcp.mongodb.net/userDb?retryWrites=true&w=majority`
-
+const connection_Url = `mongodb://mongodb-0.mongo,mongodb-1.mongo,mongodb-2.mongo:27017/replicaSet`
 module.exports = () => {
   mongoose
     .connect(connection_Url, {
