@@ -9,7 +9,7 @@ const port = process.env.PORT || 9000
 
 require('./Config/DBConnection')()
 app.get('/vapaus', (request, response) => {
-  response.send('this is working user service ')
+  response.send('this is working user service-updated ')
 })
 app.get('/user', async (request, response) => {
   await user
