@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
-const connection_Url = `mongodb://mongoose-mongo.mongoose,mongoose-mongo-1.mongo,mongoose-mongo-2.mongo:27017/userDB`
+// const connection_Url = `mongodb://mongoose-mongo.mongoose,mongoose-mongo-1.mongo,mongoose-mongo-2.mongo:27017/userDB`
+const connection_Url = `mongodb://dXNlcm5hbWU=:cGFzc3dvcmQ=@mongoose-mongo-0.mongoose-service.database.svc.cluster.local,mongoose-mongo-1.mongoose-service.database.svc.cluster.local,mongoose-mongo-2.mongoose-service.database.svc.cluster.local:27017/[db]?replicaSet=rs0&authSource=admin`
 module.exports = () => {
   mongoose
     .connect(connection_Url, {
