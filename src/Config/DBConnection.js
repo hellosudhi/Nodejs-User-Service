@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const connection_Url = `mongodb://mongodb-0.mongo,mongodb-1.mongo,mongodb-2.mongo:27017/replicaSet`
+const connection_Url = `mongodb://mongoose-mongo-0.mongoose,mongoose-mongo-1.mongoose,mongoose-mongo-2.mongoose:27017/userDB`
 module.exports = () => {
   mongoose
     .connect(connection_Url, {
